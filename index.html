@@ -113,7 +113,7 @@
             margin-bottom: 3rem;
         }
         
-        /* Hero - Section modifiée pour l'image sans bord blanc et avec bords arrondis */
+        /* Hero */
         .hero {
             display: grid;
             gap: 3rem;
@@ -184,20 +184,18 @@
             justify-content: center;
         }
         
-        /* Style de l'image modifié - sans bord blanc et avec bords arrondis */
         .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 1rem; /* Bords arrondis */
+            border-radius: 1rem;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             transform: rotate(3deg);
             transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             will-change: transform;
-            /* Suppression du bord blanc en bas */
-            display: block; /* Élimine l'espace en bas causé par le comportement inline par défaut */
-            margin: 0; /* Assure qu'il n'y a pas de marges */
-            padding: 0; /* Assure qu'il n'y a pas de padding */
+            display: block;
+            margin: 0;
+            padding: 0;
         }
         
         .hero-image img:hover {
@@ -230,7 +228,7 @@
             }
         }
         
-        /* Le reste de votre CSS */
+        /* Skills */
         .skills-grid {
             display: grid;
             gap: 2rem;
@@ -291,6 +289,7 @@
             margin-right: 0.75rem;
         }
         
+        /* Experience */
         .experience-section {
             padding: 4rem 0;
         }
@@ -321,6 +320,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--gray-900);
+            margin-right: 1rem;
         }
         
         .experience-period {
@@ -332,11 +332,31 @@
             font-size: 0.9rem;
         }
         
+        .experience-company-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-company-logo {
+            width: 40px;
+            height: 40px;
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+            color: #374151;
+            font-size: 1rem;
+            border: 1px solid #e5e7eb;
+        }
+        
         .experience-company {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--gray-700);
-            margin-bottom: 1rem;
         }
         
         .experience-location {
@@ -350,6 +370,7 @@
             line-height: 1.7;
         }
         
+        /* Project */
         .project-card {
             background-color: var(--white);
             border-radius: 1rem;
@@ -459,6 +480,7 @@
             color: var(--white);
         }
         
+        /* Contact */
         .contact-card {
             background-color: var(--white);
             border-radius: 1rem;
@@ -654,7 +676,7 @@
     </header>
 
     <main class="container">
-        <!-- Hero Section - Image avec bords arrondis et sans bord blanc -->
+        <!-- Hero Section -->
         <section id="accueil">
             <div class="hero">
                 <div class="hero-content">
@@ -759,7 +781,10 @@
                     <h3 class="experience-title">Manutentionnaire</h3>
                     <span class="experience-period">30 juin 2025 - 1er août 2025</span>
                 </div>
-                <h4 class="experience-company">Unikalo</h4>
+                <div class="experience-company-container">
+                    <div class="experience-company-logo"><img src="https://raw.githubusercontent.com/noahnormand/cv/main/unikalo.png" alt=""></div>
+                    <h4 class="experience-company">Unikalo</h4>
+                </div>
                 <p class="experience-location">Mérignac</p>
                 <p class="experience-description">
                     Mission de manutention dans un entrepôt à Mérignac. Filtrage de peinture, reconditionnement, dépotage et étiquetage.
